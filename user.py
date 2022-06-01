@@ -2,7 +2,7 @@
 from datetime import datetime
 
 class Users():
-    all_posts = [['User', 'Post', 'Date', 'Time']]
+    all_posts = []
     last_post = None
     
     def __init__(self, first, last, phone, address) -> None:
@@ -53,8 +53,8 @@ user_1 = Users('John', 'Doe', '123-456-7890', '123 Main St')
 user_2 = Users('Jane', 'Doe', '098-765-4321', '456 Grand Blvd')
 
 # Display their properties
-# print(f"User 1: {user_1}")
-# print(f"User 2: {user_2}")
+print(f"User 1: {user_1}")
+print(f"User 2: {user_2}")
 
 print(user_1.post('Test'))
 print(user_1.post('Good Morning'))
