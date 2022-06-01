@@ -38,6 +38,7 @@ class Users():
         self.last = last
 
     # Method allows an instance object to create a post
+    # Pushes post information to all_posts variable
     def post(self, post) -> str:
         if(Users.last_post == self.fullname):
             Users.all_posts.append([self.fullname, post, f'{datetime.now().strftime("%m/%d/%Y")}', f'{datetime.now().strftime("%H:%M:%S")}'])
@@ -61,11 +62,12 @@ class Users():
                 Users.all_posts.pop(posts)
                 break
          
-# Instantiate users 1 and 2
+
+
+# Driver Code #
 user_1 = Users('John', 'Doe', '123-456-7890', '123 Main St')
 user_2 = Users('Jane', 'Doe', '098-765-4321', '456 Grand Blvd')
 
-# Display their properties
 print(f"User 1: {user_1}")
 print(f"User 2: {user_2}")
 
